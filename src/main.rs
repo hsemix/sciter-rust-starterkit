@@ -36,8 +36,7 @@ fn main() {
     sciter::set_options(sciter::RuntimeOptions::ScriptFeatures(
         sciter::SCRIPT_RUNTIME_FEATURES::ALLOW_SYSINFO  as u8 |
         sciter::SCRIPT_RUNTIME_FEATURES::ALLOW_FILE_IO  as u8 |
-        sciter::SCRIPT_RUNTIME_FEATURES::ALLOW_EVAL     as u8 |
-        sciter::SCRIPT_RUNTIME_FEATURES::ALLOW_SYSINFO  as u8 
+        sciter::SCRIPT_RUNTIME_FEATURES::ALLOW_EVAL     as u8
     )).unwrap();
     
     let mut frame = sciter::Window::new();

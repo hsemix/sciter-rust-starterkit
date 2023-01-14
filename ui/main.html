@@ -1,6 +1,10 @@
-<html window-blurbehind="dark" theme="dark" window-framex="extended">
+<html 
+window-widthx="40%" 
+window-heightx="40%"
+window-blurbehindx="dark" themex="dark"
+>
 <head>
-    <title>Document</title>
+    <!-- <title>Document</title> -->
     <menu.window>
         <li>File
             <menu>
@@ -11,14 +15,47 @@
               <li.exit>Exit</li>
             </menu>  
         </li>
+
+        <li>Filex
+            <menu>
+              <li.new>New File &hellip;</li>
+              <li.open-file>Open File</li>
+              <li.open-folder>Open Folder</li>
+              <hr/>
+              <li.exit>Exit</li>
+            </menu>  
+        </li>
+
+        <li>Filexxx
+            <menu>
+              <li.new>New File &hellip;</li>
+              <li.open-file>Open File</li>
+              <li.open-folder>Open Folder</li>
+              <hr/>
+              <li.exit>Exit</li>
+            </menu>  
+        </li>
     </menu>
+
+    <style>
+        title {
+            background: black;
+        }
+    </style>
+    
     <script>
         document.on("click","menu.window li", function(ev,li) {
-            document.body.append(<text>click on {li.toString()}</text>);
+            // document.body.append(<text>click on {li.toString()}</text>);
+
+            Window.this.modal({ 
+                url   : __DIR__ + "test-window.html", 
+                type  : Window.DIALOG_WINDOW,
+                state : Window.WINDOW_SHOWN
+            });
         });
     </script>
-</head>
     
+</head>
     
 <body>
     
